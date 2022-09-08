@@ -13,13 +13,13 @@ body {
 }
 
 .navbar-fixed {
-  @apply fixed z-[11] bg-white bg-opacity-70;
-  backdrop-filter: blur(5px);
+  @apply fixed z-[11] bg-white bg-opacity-70 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block bg-dark;
+  @apply my-2 block h-[2px] w-[30px] bg-dark dark:bg-white;
 }
 
 .hamburger-active > span:nth-child(1) {
@@ -36,17 +36,17 @@ body {
 
 @layer components {
   .icon-img {
-    @apply w-8 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300;
+    @apply mr-3 flex h-9 w-8 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white;
   }
 }
 
 .dots {
-  @apply absolute bottom-0 left-[50%] -translate-x-[50%] flex;
+  @apply absolute bottom-0 left-[50%] flex -translate-x-[50%];
 }
 .dots__dot {
-  @apply border-none bg-slate-400 opacity-80 h-4 w-4 rounded-full mr-7 cursor-pointer transition-all duration-300 
-  /* Only necessary when overlying images */
-  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */;
+  @apply /* Only necessary when overlying images */ /* box-shadow: 0 
+  0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+  mr-7 h-4 w-4 cursor-pointer rounded-full border-none bg-slate-400 opacity-80 transition-all duration-300;
 }
 
 .dots__dot:last-child {
@@ -59,5 +59,9 @@ body {
 }
 
 .button-project-link {
-  @apply w-1/2 bg-primary p-1 m-4 rounded-3xl hover:opacity-80 text-center;
+  @apply m-4 w-1/2 rounded-3xl bg-primary p-1 text-center hover:opacity-80;
+}
+
+#mode-dark:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
 }
