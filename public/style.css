@@ -759,14 +759,6 @@ body {
   height: 3rem;
 }
 
-.max-h-5 {
-  max-height: 1.25rem;
-}
-
-.max-h-10 {
-  max-height: 2.5rem;
-}
-
 .w-full {
   width: 100%;
 }
@@ -1331,14 +1323,6 @@ body {
 
   .lg\:h-\[300px\] {
     height: 300px;
-  }
-
-  .lg\:h-\[100px\] {
-    height: 100px;
-  }
-
-  .lg\:h-\[250px\] {
-    height: 250px;
   }
 
   .lg\:w-1\/2 {
